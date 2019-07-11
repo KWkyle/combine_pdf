@@ -200,7 +200,7 @@ module CombinePDF
             if pos[0].is_a? String
 
               # Names should sorted in ascending,
-              # so re-sort is needed if preserving names.
+              # so re-sort is needed if preserving names
               pos = pos.group_by.with_index{|_, i| i/2 }.values.sort_by(&:first).flatten(1) if @preserve_names
 
               (pos.length / 2).times do |i|
